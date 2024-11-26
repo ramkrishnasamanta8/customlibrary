@@ -1,16 +1,21 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import Video from 'react-native-video';
+// import Video from 'react-native-video';
 
-const VideoPlayer = ({ url }) => {
+const VideoPlayer = ({ url,deviceType }) => {
   return (
     <View style={styles.container}>
-      <Video
+      {
+        deviceType=='desktop' ? <video controls  style={styles.video} className="videoPlayer" src={url}></video>:
+        <Video
         source={{ uri: url }}
         style={styles.video}
         controls
         resizeMode="contain"
       />
+      }
+      
+      
     </View>
   );
 };
