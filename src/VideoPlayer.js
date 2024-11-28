@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-// import Video from 'react-native-video';
+ import Video from 'react-native-video';
 
 const VideoPlayer = ({ url,deviceType }) => {
   return (
